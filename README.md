@@ -17,7 +17,7 @@
 
 
 
-* Technologies, Libraries, APIs
+* Technologies, Libraries, APIs:
     three.js
 
 
@@ -29,3 +29,5 @@
     - Tuesday: add more features if possible
     - Wednesday: Refine and finalize the project
 
+
+![wireframe](wireframe.png)
