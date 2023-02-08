@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <span id="pop"></span><br />
+    <span id="birth"></span><br />
+    <span id="death"></span><br />
+  </body>
+  <script>
+    async function print_stat() {
+      const response = await fetch(
+        "https://population.un.org/dataportalapi/api/v1/data/indicators/52%2C57%2C60/locations/900?startYear=2023&endYear=2023&sexes=3&pagingInHeader=false&format=json&variants=4"
+      );
+      const response_json = await response.json();
+      const data = response_json.data;
+
+      const pop_year = data[0].value;
+      const birth_year = data[1].value;
+      const death_year = data[2].value;
+      // document.getElementById(
+      //   "pop"
+      // ).innerText = `Population Growth: ${pop_year}`;
+      // document.getElementById(
+      //   "birth"
+      // ).innerText = `Birth per year: ${birth_year}`;
+      // document.getElementById(
+      //   "death"
+      // ).innerText = `Death per year: ${death_year}`;
+      return pop_year;
+    }
+    print_stat();
+    // const temp = await fetch(
+    //   "https://population.un.org/dataportalapi/api/v1/data/indicators/52%2C57%2C60/locations/900?startYear=2023&endYear=2023&sexes=3&pagingInHeader=false&format=json&variants=4"
+    // );
+
+    // .then((response) => response.json())
+    // .then((response) => print_stat(response.data));
+
+    // console.log(test);
+    // function print_suicide(data) {
+    //   console.log(data);
+    //   //   const suicide_year = data[1].value - data[0].value;
+    //   document.getElementById(
+    //     "suicide"
+    //   ).innerText = `Suicide per year: ${suicide_year}`;
+    // }
+    // fetch(
+    //   "https://ghoapi.azureedge.net/api/SDGSUICIDE?$filter=Dim1 eq 'BTSX' and TimeDim eq 2019 and Dim2 eq 'YEARSALL' and SpatialDim eq 'GLOBAL'"
+    // )
+    //   .then((response) => response.json())
+    //   .then((response) => print_suicide(response.data));
+  </script>
+</html>

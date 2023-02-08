@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <span id="pop"></span>
+    <span id="suicide"></span>
+  </body>
+  <script>
+    function print_pop(data) {
+      const pop_year = data[1].value - data[0].value;
+      document.getElementById(
+        "pop"
+      ).innerText = `Population Growth: ${pop_year}`;
+    }
+    fetch(
+      "https://population.un.org/dataportalapi/api/v1/data/indicators/49/locations/900?startYear=2022&endYear=2023&sexes=3&pagingInHeader=false&format=json&variants=4"
+    )
+      .then((response) => response.json())
+      .then((response) => print_pop(response.data));
+
+    // console.log(test);
+    // function print_suicide(data) {
+    //   console.log(data);
+    //   //   const suicide_year = data[1].value - data[0].value;
+    //   document.getElementById(
+    //     "suicide"
+    //   ).innerText = `Suicide per year: ${suicide_year}`;
+    // }
+    // fetch(
+    //   "https://ghoapi.azureedge.net/api/SDGSUICIDE?$filter=Dim1 eq 'BTSX' and TimeDim eq 2019 and Dim2 eq 'YEARSALL' and SpatialDim eq 'GLOBAL'"
+    // )
+    //   .then((response) => response.json())
+    //   .then((response) => print_suicide(response.data));
+  </script>
+</html>
