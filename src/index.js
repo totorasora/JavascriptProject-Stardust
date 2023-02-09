@@ -22,10 +22,10 @@ ACTIVE_FLAGS[SCREEN_ID[0]] = true;
 // }
 
 var DESCRIPTION_MAP = {
-  "death": "Every star represents 10,000 souls which have passed in the past year",
-  "population": "Every star represents an increase of 10,000 in the total human population in the past year",
-  "suicide": "For every new star, one person commits suicide",
-  "hunger": "For every new star, one person dies of hunger"
+  "death": "Every star represents 10,000 souls which have passed in the past year. Click on the stars button to see next page",
+  "population": "Every star represents an increase of 10,000 in the total human population in the past year. Click on the stars button to see next page",
+  "suicide": "For every new star, one person commits suicide. Click on the stars button to see next page",
+  "hunger": "For every new star, one person dies of hunger. Click on the stars button to see next page"
 }
 
 
