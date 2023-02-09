@@ -41,7 +41,7 @@ function setupPopulationPage(canvasId, flags, pop_year) {
 
     meshes.forEach((mesh, index) => {
       const radius = 1 + (10 * index) / meshes.length;
-      const speed = index / meshes.length / 1000;
+      const speed = index / meshes.length / 5000;
       mesh.position.set(
         radius * Math.sin(index + 1 * time * speed),
         radius * Math.cos(index + 2 * time * speed),

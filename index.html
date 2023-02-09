@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron">
     <title>Stardust</title>
     <link rel="icon" type="image/x-icon" href="./src/favicon.ico">
   </head>
@@ -14,14 +15,29 @@
   <body>
     <div class="container">
       
-      <p title="Click!"><img id="intro_page" src="./src/img/cosmos.jpeg" alt="click!"></p>
-      <p class="description">Intro Page description</p>
-      <div class="button">
+      <!-- <p title="Click!"><img id="intro_page" src="./src/img/cosmos.jpeg" alt="click!"></p> -->
+      <div id="intro_page">
+        <div title="Enter" id="enter_image">
+          <img src="src/img/enter.png">
+        </div>
+      </div>
+
+      <p class="description"></p>
+      <div id="info_container" class="button">
         <button id="info">
           <!-- <img src="src/img/icon_next-page_1.png"> -->
         </button>
+        <div id="info_description"></div>
+      </div>
+      <div class="button">
         <button id="changeView">
           <!-- <img src="src/img/icon_next-page_1.png"> -->
+        </button>
+      </div>
+
+      <div id="music-button">
+        <button id="music-option">
+          <!-- <img src="src/img/musicplay.png"> -->
         </button>
       </div>
       <div id="music">
@@ -68,7 +84,7 @@
     
     <script src="./dist/main.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       // <![CDATA[
       var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
       var sparkles=50;
@@ -277,7 +293,7 @@
       //   followText.style.left = event.clientX + "px";
       //   followText.style.top = event.clientY + "px";
       // });
-      </script>
+      </script> -->
   </body>
 
 

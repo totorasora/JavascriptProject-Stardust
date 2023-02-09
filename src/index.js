@@ -6,13 +6,30 @@ import { setupSuicidePage } from "./scripts/suicide.js";
 import { setupPopulationPage } from "./scripts/spiral.js";
 import { setupHungerPage } from "./scripts/hunger.js";
 
-let SCREEN_ID = ["death", "population", "suicide", "hunger"];
+let SCREEN_ID = ["death", "population", "hunger", "suicide"];
 
 var ACTIVE_FLAGS = {};
 SCREEN_ID.forEach((id) => {
   ACTIVE_FLAGS[id] = false;
 });
 ACTIVE_FLAGS[SCREEN_ID[0]] = true;
+
+// var DESCRIPTION_MAP = {
+//   "death": "Every star in the sky, A symbol of hope, a beacon so bright. 10,000 souls pass on every day, Their time on Earth has come to an end, they say.",
+//   "population": "From every cube, 10,000 lives take form, Each unique and brilliant, with its own charm. They grow and they flourish, they spread and they thrive, Their potential boundless, a gift to survive.",
+//   "suicide": "The stars that twinkle, a symbol of hope. For those lost to suicide, their story untold. A life full of potential, now lost to the night, For every new star, one person takes their own life.",
+//   "hunger": "For every new star, one person dies of hunger. Life is a bitch."
+// }
+
+var DESCRIPTION_MAP = {
+  "death": "Every star represents 10,000 souls which have passed in the past year",
+  "population": "Every star represents an increase of 10,000 in the total human population in the past year",
+  "suicide": "For every new star, one person commits suicide",
+  "hunger": "For every new star, one person dies of hunger"
+}
+
+
+var activePage = SCREEN_ID[0];
 
 document.addEventListener("DOMContentLoaded", function (event) {
   var pageNumber = 0;
@@ -24,6 +41,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
     introPage.style.display = "None";
   });
   document.getElementById("changeView").addEventListener("click", changeView);
+  document.getElementById("info").addEventListener("click", showDescription);
+
+  document.documentElement.addEventListener("click", hideDescription);
+
+  let musicControls = document.getElementById("music");
+  let musicButton = document.getElementById("music-button");
+  musicButton.addEventListener("click", (e) => {
+    event.preventDefault();
+    event.stopPropagation();
+    musicControls.style.display = musicControls.style.display === "none" ? "flex" : "none";
+  })
+
+  function showDescription(event) {
+    console.log(event)
+    let description = DESCRIPTION_MAP[activePage];
+    let descriptionNode = document.getElementById("info_description")
+    descriptionNode.style.display = "block";
+    descriptionNode.textContent = description;
+    // show your description
+  }
+
+  function hideDescription(event) {
+    // do not hide description if user clicked on info button
+    if (event.target.id === "info") {
+      return;
+    }
+    let descriptionNode = document.getElementById("info_description");
+    descriptionNode.style.display = "None";
+  }
 
   function changeView() {
     let pages = SCREEN_ID.map((pageId) => {
@@ -36,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (index === pageNumber) {
         page.style.display = "block";
         ACTIVE_FLAGS[page.id] = true;
+        activePage = page.id;
       } else {
         page.style.display = "None";
         ACTIVE_FLAGS[page.id] = false;

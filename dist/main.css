@@ -8,10 +8,19 @@
 }
 
 #intro_page {
-  top: 0;
-  left: 0;
-  position: relative;
+  background-image: url("../src/img/cosmos.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 1000;
+}
+
+#enter_image {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 1100;
 }
 
 .container {
@@ -54,11 +63,38 @@ footer img {
   justify-content: flex-end;
   position: absolute;
   width: 100%;
+  margin-top: 20px;
+}
+
+#music-option {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+  z-index: 10;
+  background-image: url(../src/img/musicplay.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+#music {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: rgb(116, 111, 81);
 }
 
 #info {
   position: absolute;
-  margin-right: 80px;
+  margin-right: 90px;
   z-index: 10;
   background-image: url(../src/img/info.png);
   background-repeat: no-repeat;
@@ -67,6 +103,21 @@ footer img {
   width: 50px;
   height: 50px;
   border-radius: 25px;
+}
+
+#info_container {
+  z-index: 20;
+}
+
+#info_description {
+  font-family: "Orbitron", sans-serif;
+  font-size: small;
+  z-index: 25;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  width: 150px;
+  margin-right: 90px;
 }
 
 #changeView {
@@ -83,17 +134,10 @@ footer img {
 }
 
 audio {
-  width: 250px;
-  height: 25px;
+  width: 300px;
+  height: 50px;
   margin-left: 20px;
   position: relative;
   z-index: 5;
-}
-
-#music {
-  position: absolute;
-}
-
-audio::-webkit-media-controls-panel {
-  background-color: rgba(0, 84, 83, 0.786);
+  padding: 10px;
 }
