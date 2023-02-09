@@ -124,6 +124,6 @@ document.addEventListener('DOMContentLoaded', function(event){
     startScreen();
     setupSuicidePage("#suicide-canvas", ACTIVE_FLAGS);
     setupPopulationPage("#population-canvas", ACTIVE_FLAGS);
-    setupHungerPage("hunger")
+    setupHungerPage("#hunger", ACTIVE_FLAGS);
 })
 
