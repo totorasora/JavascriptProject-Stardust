@@ -4,6 +4,7 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 import { setupSuicidePage } from './scripts/suicide.js';
 import { setupPopulationPage } from './scripts/spiral.js';
+import { setupHungerPage } from './scripts/hunger.js';
 
 
 let SCREEN_ID = ["death", "population", "suicide", "hunger"];
@@ -123,5 +124,6 @@ document.addEventListener('DOMContentLoaded', function(event){
     startScreen();
     setupSuicidePage("#suicide-canvas", ACTIVE_FLAGS);
     setupPopulationPage("#population-canvas", ACTIVE_FLAGS);
+    setupHungerPage("hunger")
 })
 
