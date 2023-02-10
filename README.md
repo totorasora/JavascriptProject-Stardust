@@ -1,7 +1,4 @@
-*** <Stardust> by Kristin Lee ***
-
-    ** Link **
-    https://totorasora.github.io/Javascript_project_Stardust
+# Stardust by Kristin Lee
 
     Stardust is a data visualiztion project showing world population changes. It is built with JavaScript, three.js, HTML, CSS. External API / data sources are UN, WHO, United States Census Bureau.
     Data corresponding to the categories below are extracted and visualized.
@@ -16,9 +13,20 @@
     User can choose music by clicking on left top play button.
 
 
-* Technologies, Libraries, APIs:
-    three.js, United Nations Database API
+## Link
+    https://totorasora.github.io/Javascript_project_Stardust
 
+
+## Technologies, Libraries, APIs used
+    JavaScript
+    three.js
+    HTML
+    CSS/SCSS
+    United Nations Database API
+    
+
+## from developer
+    Hello, welcome to my little page! I made this webpage hoping that people would have a special moment of experience through visual/auditory effects and think about life/death and other people living in different environments in the world. We are all made of stars and we will all go back to stardust. Hope you enjoy it!
 
 
 
