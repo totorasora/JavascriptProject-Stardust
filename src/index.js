@@ -13,10 +13,10 @@ SCREEN_ID.forEach((id) => {
 ACTIVE_FLAGS[SCREEN_ID[0]] = true;
 
 var DESCRIPTION_MAP = {
-  "death": "Every star represents 10,000 souls which have passed in the past year. Zoom in/out and rotate the page to change the view. Click on the stars button to see next page",
-  "population": "Every star represents an increase of 10,000 in the total human population in the past year. Zoom in/out and rotate the page to change the view. Click on the stars button to see next page",
-  "suicide": "For every new star, one person commits suicide. Zoom in/out and rotate the page to change the view. Click on the stars button to see next page",
-  "hunger": "For every new star, one person dies of hunger. Zoom in/out and rotate the page to change the view. Click on the stars button to see next page"
+  "death": `Every star represents 10,000 souls which have passed in the past year`,
+  "population": `Every star represents an increase of 10,000 in the total human population in the past year`,
+  "suicide": `For every new star, one person commits suicide`,
+  "hunger": `For every new star, one person dies of hunger`
 }
 
 var activePage = SCREEN_ID[0];
@@ -32,9 +32,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var pageNumber = 0;
 
   // hide intro page once user clicks
-  var introPage = document.getElementById("intro_page");
+  const introPage = document.getElementById("intro_page");
+  const instructionMessage = document.getElementById("instruction_message");
   introPage.addEventListener("click", (e) => {
-    introPage.style.display = "None";
+    introPage.style.display = "none";
+    instructionMessage.style.display = "block"
+  });
+
+  // hide instruction message once user clicks
+  instructionMessage.addEventListener("click", function() {
+    instructionMessage.style.display = "none";
   });
 
   musicButton.addEventListener("click", (e) => {

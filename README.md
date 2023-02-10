@@ -29,11 +29,15 @@
 
 ## from developer
     Hello, welcome to my little page!
-    I made this webpage hoping that people would have
+    I made this page hoping that people would have
     a special moment of experience through visual/auditory effects
     and think about life/death and other people
     living in different environments in the world.
-    We are all made of stars and we will all go back to stardust.
+    Only population growth page is in various colors
+    because it's about new lives not death,
+    Colors and spiral move represent diversity and harmony.
+    Other pages are about death data so I made them to stars.
+    We are all made of stars and we will all go back to stardust one day.
     Hope you enjoy it!
 
 
