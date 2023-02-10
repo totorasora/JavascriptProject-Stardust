@@ -3,8 +3,8 @@
     Stardust is a data visualiztion project showing world population changes. It is built with JavaScript, three.js, HTML, CSS. External API / data sources are UN, WHO, United States Census Bureau.
     Data corresponding to the categories below are extracted and visualized.
 
-    - total world population growth / year
-    - death count last 1 year
+    - total world population growth of the past year
+    - death count of the past year
     - speed of people who died of hunger count increase
     - speed of suicide count increase
 
