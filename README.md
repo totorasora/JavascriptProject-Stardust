@@ -23,10 +23,16 @@
     HTML
     CSS/SCSS
     United Nations Database API
-    
+
 
 ## from developer
-    Hello, welcome to my little page! I made this webpage hoping that people would have a special moment of experience through visual/auditory effects and think about life/death and other people living in different environments in the world. We are all made of stars and we will all go back to stardust. Hope you enjoy it!
+    Hello, welcome to my little page!
+    I made this webpage hoping that people would have
+    a special moment of experience through visual/auditory effects
+    and think about life/death and other people
+    living in different environments in the world.
+    We are all made of stars and we will all go back to stardust.
+    Hope you enjoy it!
 
 
 
