@@ -11,8 +11,6 @@ function setupSuicidePage(canvasId, flags) {
 
   var scene, camera, light_1, light_2, controls, stars, updateStarId, angle;
 
-  // var previousStateActive = false
-
   function initialize() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(
@@ -22,17 +20,16 @@ function setupSuicidePage(canvasId, flags) {
       1000
     );
     camera.position.x = 20;
-    // camera.position.y = 20;
     camera.position.z = 100;
     light_1 = new THREE.PointLight();
     scene.add(light_1);
     light_1.position.set(0, 0, 10);
     light_2 = new THREE.PointLight();
-    // light_2.position.set(0, 0, 0);
     scene.add(light_2);
     controls = new OrbitControls(camera, canvas);
     stars = [];
     renderer.setSize(window.innerWidth, window.innerHeight);
+    angle = 0;
 
     const suicide_time = 1 / (703000 / 365 / 24 / 60 / 60);
 
@@ -47,7 +44,6 @@ function setupSuicidePage(canvasId, flags) {
       scene.add(star);
     }, suicide_time * 1000);
 
-    angle = 0;
   }
 
   function animateSuicide() {
@@ -71,6 +67,7 @@ function setupSuicidePage(canvasId, flags) {
 
   initialize();
   animateSuicide();
+  
 }
 
 export { setupSuicidePage };

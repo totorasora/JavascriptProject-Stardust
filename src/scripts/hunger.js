@@ -11,8 +11,6 @@ function setupHungerPage(canvasId, flags) {
 
   var scene, camera, light_1, light_2, controls, stars, updateStarId, angle;
 
-//   var previousStateActive = false
-
   function initialize() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -28,6 +26,9 @@ function setupHungerPage(canvasId, flags) {
     controls = new OrbitControls( camera, canvas );
     stars = [];
     renderer.setSize( window.innerWidth, window.innerHeight );
+    angle = 0;
+
+    const hunger_time = 1 / (9010200 / 365 / 24 / 60 / 60);
 
     updateStarId = setInterval(function() {
         const geometry = new THREE.IcosahedronGeometry(0.5, 0);
@@ -38,9 +39,8 @@ function setupHungerPage(canvasId, flags) {
         star.position.z = (Math.random() - 0.5) * 100;
         stars.push(star);
         scene.add(star);
-    }, 1000);
+    }, hunger_time * 1000);
 
-    angle = 0;
   }
 
   function animateHunger() {

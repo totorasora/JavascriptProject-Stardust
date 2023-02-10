@@ -85,6 +85,7 @@ function setupPopulationPage(canvasId, flags, pop_year) {
   initialize();
   createSpiral();
   animateSpiral();
+  
 }
 
 export { setupPopulationPage };
