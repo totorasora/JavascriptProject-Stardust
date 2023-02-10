@@ -1,6 +1,8 @@
 # Stardust by Kristin Lee
 
-    Stardust is a data visualiztion project showing world population changes. It is built with JavaScript, three.js, HTML, CSS. External API / data sources are UN, WHO, United States Census Bureau.
+    Stardust is a data visualiztion project showing world population changes.
+    It is built with JavaScript, three.js, HTML, CSS.
+    External API / data sources are UN, WHO, United States Census Bureau.
     Data corresponding to the categories below are extracted and visualized.
 
     - total world population growth of the past year
