@@ -11,7 +11,7 @@
     - speed of suicide count increase
 
     Description to each page will be shown when user clicks on information button on right top.
-    PageVisual data will be changed to next data when user clicks right top button with stars in it.
+    Visual data will be changed to next data when user clicks right top button with stars in it.
     User can choose music by clicking on left top play button.
 
 
