@@ -16,7 +16,7 @@
 
 
 ## Link
-    https://totorasora.github.io/Javascript_project_Stardust
+    https://totorasora.github.io/JavascriptProject-Stardust
 
 
 ## Technologies, Libraries, APIs used
