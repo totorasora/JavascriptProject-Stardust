@@ -16,7 +16,7 @@
 
 
 ## Website
-### [Live website](https://totorasora.github.io/Javascript_project_Stardust)
+### [Live website](https://totorasora.github.io/JavascriptProject-Stardust/)
 
 
 ## Technologies, Libraries, APIs used
