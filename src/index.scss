@@ -23,6 +23,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1100;
+    cursor: pointer;
 }
 
 #instruction_message {
@@ -35,13 +36,15 @@
     border-radius: 10px;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    font-size: small;
+    font-size: medium;
+    // text-shadow: 0 0 0px rgb(254, 233, 224), 0 0 2px rgb(254, 233, 224), 0 0 2px rgb(254, 233, 224);
     z-index: 25;
-    background-color:black;
-    opacity: 0.5;
-    color: white;
-    width: 250px ;
-  }
+    background-color: rgba(0, 0, 0, 0.4);
+    // opacity: 0.8;
+    color: rgb(254, 233, 224);
+    width: 365px ;
+    cursor: pointer;
+}
 
 .container {
     background: black;
@@ -71,6 +74,7 @@ footer {
 footer img {
     height: 30px;
     width: 30px;
+    margin: 5px;
 }
 
 .Nav-link {
@@ -78,7 +82,7 @@ footer img {
     align-items: center;
 }
 
-.button {
+.button-icon {
     display: flex;
     justify-content: flex-end;
     position: absolute;
@@ -105,7 +109,19 @@ footer img {
     display: none;
     flex-direction: column;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 80px;
+
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    font-size: small;
+    z-index: 25;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+#music p {
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
 audio::-webkit-media-controls-panel {
@@ -157,7 +173,6 @@ audio::-webkit-media-controls-panel {
 audio {
     width: 300px;
     height: 50px;
-    margin-left: 20px;
     position: relative;
     z-index: 5;
     padding: 10px;

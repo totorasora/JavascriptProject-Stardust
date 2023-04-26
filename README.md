@@ -5,26 +5,26 @@
     External API / data sources are UN, WHO, United States Census Bureau.
     Data corresponding to the categories below are extracted and visualized.
 
-    - total world population growth of the past year
-    - death count of the past year
-    - speed of people who died of hunger count increase
-    - speed of suicide count increase
+- total world population growth of the past year
+- death count of the past year
+- speed of people who died of hunger count increase
+- speed of suicide count increase
 
     Description to each page will be shown when user clicks on information button on right top.
     Visual data will be changed to next data when user clicks right top button with stars in it.
     User can choose music by clicking on left top play button.
 
 
-## Link
-    https://totorasora.github.io/Javascript_project_Stardust
+## Website
+### [Live website](https://totorasora.github.io/Javascript_project_Stardust)
 
 
 ## Technologies, Libraries, APIs used
-    JavaScript
-    three.js
-    HTML
-    CSS/SCSS
-    United Nations Database API
+- JavaScript
+- three.js
+- HTML
+- CSS/SCSS
+- United Nations Database API
 
 
 ## from developer
