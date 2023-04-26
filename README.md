@@ -1,4 +1,4 @@
-# Stardust by Kristin Lee
+# Stardust
 
     Stardust is a data visualiztion project showing world population changes.
     It is built with JavaScript, three.js, HTML, CSS.
