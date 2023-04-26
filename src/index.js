@@ -7,9 +7,11 @@ import { setupHungerPage } from "./scripts/hunger.js";
 let SCREEN_ID = ["death", "population", "hunger", "suicide"];
 
 var ACTIVE_FLAGS = {};
+
 SCREEN_ID.forEach((id) => {
   ACTIVE_FLAGS[id] = false;
 });
+
 ACTIVE_FLAGS[SCREEN_ID[0]] = true;
 
 var DESCRIPTION_MAP = {
@@ -22,16 +24,14 @@ var DESCRIPTION_MAP = {
 var activePage = SCREEN_ID[0];
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  document.getElementById("changeView").addEventListener("click", changeView);
+
+  document.getElementById("music-button").addEventListener("click", showMusic);
   document.getElementById("changeView").addEventListener("click", changeView);
   document.getElementById("info").addEventListener("click", showDescription);
   document.documentElement.addEventListener("click", hideDescription);
-  let musicControls = document.getElementById("music");
-  let musicButton = document.getElementById("music-button");
   
   var pageNumber = 0;
 
-  // hide intro page once user clicks
   const introPage = document.getElementById("intro_page");
   const instructionMessage = document.getElementById("instruction_message");
   introPage.addEventListener("click", (e) => {
@@ -39,16 +39,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
     instructionMessage.style.display = "block"
   });
 
-  // hide instruction message once user clicks
   instructionMessage.addEventListener("click", function() {
     instructionMessage.style.display = "none";
   });
 
-  musicButton.addEventListener("click", (e) => {
-    event.preventDefault();
-    event.stopPropagation();
-    musicControls.style.display = musicControls.style.display === "none" ? "flex" : "none";
-  })
+  function showMusic() {
+    const musicControls = document.getElementById("music");
+    musicControls.style.display = "flex";
+  }
+
+  document.addEventListener("click", function (event) {
+    const musicControls = document.getElementById("music");
+    const musicButton = document.getElementById("music-button");
+  
+    if (event.target !== musicButton && !musicButton.contains(event.target)) {
+      musicControls.style.display = "none";
+    }
+  });
 
   function showDescription() {
     let description = DESCRIPTION_MAP[activePage];
@@ -63,8 +70,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
       return;
     }
     let descriptionNode = document.getElementById("info_description");
-    descriptionNode.style.display = "None";
+    descriptionNode.style.display = "none";
   }
+
+  // infoButton.addEventListener("click", (e) => {
+  //   event.preventDefault();
+  //   event.stopPropagation();
+  //   let description = DESCRIPTION_MAP[activePage];
+  //   let descriptionNode = document.getElementById("info_description")
+  //   descriptionNode.style.display = descriptionNode.style.display === "none" ? "flex" : "none";
+  //   descriptionNode.textContent = description;
+  // })
 
   function changeView() {
     let pages = SCREEN_ID.map((pageId) => {
