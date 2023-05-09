@@ -1,6 +1,6 @@
 # Stardust
 
-<img src="https://kslportfolio.s3.us-west-1.amazonaws.com/stardust.gif" alt="text" width="800"/>
+<img src="https://kslportfolio.s3.us-west-1.amazonaws.com/StardustSmall.gif" alt="text" width="800"/>
 
 
 ## Website
