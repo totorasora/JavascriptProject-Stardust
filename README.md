@@ -1,5 +1,12 @@
 # Stardust
 
+<img src="https://kslportfolio.s3.us-west-1.amazonaws.com/stardust.gif" alt="" width="800"/>
+
+
+## Website
+### [Live website](https://totorasora.github.io/JavascriptProject-Stardust/)
+
+
     Stardust is a data visualiztion project showing world population changes.
     It is built with JavaScript, three.js, HTML, CSS.
     External API / data sources are UN, WHO, United States Census Bureau.
@@ -13,13 +20,6 @@
     Description to each page will be shown when user clicks on information button on right top.
     Visual data will be changed to next data when user clicks right top button with stars in it.
     User can choose music by clicking on left top play button.
-
-
-<img src="https://kslportfolio.s3.us-west-1.amazonaws.com/stardust.gif" alt="" width="800"/>
-
-
-## Website
-### [Live website](https://totorasora.github.io/JavascriptProject-Stardust/)
 
 
 ## Technologies, Libraries, APIs used
