@@ -15,6 +15,9 @@
     User can choose music by clicking on left top play button.
 
 
+<img src="https://kslportfolio.s3.us-west-1.amazonaws.com/stardust.gif" alt="" width="800"/>
+
+
 ## Website
 ### [Live website](https://totorasora.github.io/JavascriptProject-Stardust/)
 
