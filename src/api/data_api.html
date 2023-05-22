@@ -30,7 +30,7 @@
     print_stat();
     const temp = await fetch(
       "https://population.un.org/dataportalapi/api/v1/data/indicators/52%2C57%2C60/locations/900?startYear=2023&endYear=2023&sexes=3&pagingInHeader=false&format=json&variants=4"
-    );
+    )
 
     .then((response) => response.json())
     .then((response) => print_stat(response.data));
